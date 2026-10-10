@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="PC Mobile Bridge">
+  <title>PC Mobile Bridge</title>
+  <!-- the phone: it is attached to the PC, not to this server -->
+  <rect x="6" y="14" width="18" height="34" rx="4" fill="none" stroke="#3b82f6" stroke-width="3.5"/>
+  <circle cx="15" cy="42" r="2.2" fill="#3b82f6"/>
+  <!-- the PC that holds the phone and the toolchain -->
+  <rect x="38" y="18" width="20" height="15" rx="2.5" fill="none" stroke="#64748b" stroke-width="3.5"/>
+  <path d="M48 33 v5" fill="none" stroke="#64748b" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M41 41 h14" fill="none" stroke="#64748b" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- the bridge: DSH reaches the phone through the PC -->
+  <path d="M24 30 C30 30 31.5 25.5 38 25.5" fill="none" stroke="#f59e0b" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

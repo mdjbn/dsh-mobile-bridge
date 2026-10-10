@@ -1,0 +1,53 @@
+{
+  "name": "dsh-pc-mobile-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DeepSeek Harness plugin: drive a phone attached to a Windows PC (adb, fastboot, COM ports) from a DSH server that has no USB access to it, through the dsh-mobile-bridge.exe helper.",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "tools.js",
+    "bridge-client.js",
+    "host-adb.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "android",
+    "adb",
+    "fastboot",
+    "serial"
+  ],
+  "dshHostRuntime": {
+    "server": {
+      "requiredServices": [
+        "tools"
+      ],
+      "optionalServices": [
+        "webServer"
+      ],
+      "note": "Inert documentation only: host packages are intentionally absent from dependencies. This plugin has zero runtime dependencies and uses only Node built-ins plus the global fetch."
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

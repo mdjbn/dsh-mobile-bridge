@@ -1,0 +1,15 @@
+# dsh-pc-mobile-bridge bundle patch.
+#
+# Mounts the host plugin that talks to dsh-mobile-bridge.exe on the Windows PC.
+# Later layers (the profile's own cordis.patch.yml, or a --patch overlay) can
+# override this row by id.
+#
+# Fill in bridgeUrl/token with the two lines dsh-mobile-bridge.exe prints on the
+# PC, then reload the profile. Leave them empty and the plugin still mounts:
+# every pc_mobile_* tool then answers with the exact config to add.
+- insert:
+    - id: pc-mobile-bridge
+      name: 'dsh-pc-mobile-bridge'
+      config:
+        bridgeUrl: ''
+        token: ''

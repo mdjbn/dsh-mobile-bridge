@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "PC 手机桥接",
+    "description": "让 DSH 服务器通过 PC 上的 dsh-mobile-bridge.exe 操作接在 PC 上的手机：adb、fastboot 与原始 COM 口。"
+  }
+}

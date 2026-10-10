@@ -1,0 +1,13 @@
+# 投稿到 awesome-dsh-plugin 的条目文件。
+#
+# 用法：把本文件复制为该仓库的 data/plugins/1045188196__dsh-mobile-bridge.yml（文件名规则
+# <owner>__<repo>.yml，一个 PR 最多 3 条），然后提 PR。注释会被 YAML 解析器忽略，可原样保留。
+#
+# 前提（本仓库已满足）：仓库根目录的 package.json 里声明了 dsh.bundle —— 收录 CI 就靠它判断
+# 这是可安装的插件；只声明 dsh.client 会被拒。CI 也会检查仓库创建满 1 天、有无 dsh-plugin topic。
+url: https://www.656463.xyz:20236/1045188196/dsh-mobile-bridge
+name: 1045188196/dsh-mobile-bridge
+category: remote
+description:
+  en: 'Lets a DSH server that has no USB access drive a phone plugged into a Windows PC: one single-file bridge on the PC owns adb, fastboot, the adb server and the COM ports, and the plugin exposes them as pc_mobile_* tools over a token-protected HTTP API.'
+  zh: '让没有 USB 的 DSH 服务器也能操作插在 Windows PC 上的手机：PC 端跑一个单文件控制端，持有 adb、fastboot、adb server 与 COM 口，插件通过带 token 的 HTTP API 把它暴露成 pc_mobile_* 工具。'

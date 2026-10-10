@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "PC Mobile Bridge",
+    "description": "Drive a phone plugged into a Windows PC — adb, fastboot and raw COM ports — from this DSH server through dsh-mobile-bridge.exe."
+  }
+}

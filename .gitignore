@@ -1,0 +1,17 @@
+# 构建缓存与工具链：体积很大，且都能重新生成，绝不入库
+.toolchain/
+.gotmp/
+.gocache/
+.gopath/
+.restructure-backup/
+
+# 测试输出（日志、临时数据）
+tests/.out/
+
+# Node
+node_modules/
+
+# 编辑器 / 系统噪音
+.DS_Store
+Thumbs.db
+*.swp
