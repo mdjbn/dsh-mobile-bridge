@@ -92,13 +92,12 @@ Windows 防火墙第一次会弹窗，**必须允许专用网络入站**，否�
 
 ## 3. DSH 端：插件
 
-**本仓库根目录就是插件包**（`package.json` 里声明了 `dsh.bundle`），直接按包安装即可：
+**本仓库根目录就是插件包**（`package.json` 里声明了 `dsh.bundle`）。安装方式二选一：
 
-```sh
-dsh plugin add https://www.656463.xyz:20236/1045188196/dsh-mobile-bridge   # 或：dsh plugin add /path/to/harness-pc-mobile
-```
+1. **用 DSH 的插件安装入口（推荐）**：给出仓库地址 `https://www.656463.xyz:20236/1045188196/dsh-mobile-bridge` 或本机绝对路径，让宿主把它装进 profile —— 它会写进 profile `package.json` 的 `dsh.profile.bundles`。
+2. **手工**：`dsh plugin --profile <profile> add <仓库地址或本地路径>`（该子命令就是在这个 profile 目录里跑 pnpm），**然后还要**把包名 `dsh-pc-mobile-bridge` 加进 profile `package.json` 的 `dsh.profile.bundles` 数组；只装依赖不登记 bundle 是不会挂载的。
 
-开发时也可以在本机把仓库目录 `link:` 进 profile（本机用的就是这条路径）：`plugin_manager install_bundle target="<仓库绝对路径>"`。
+装完（或换成新的安装路径后）**重启一次 DSH 宿主**才会加载新的模块代。
 
 配置桥接地址，在 profile 的 `cordis.patch.yml`（用户 patch 层）加一条覆盖：
 
